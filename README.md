@@ -1,6 +1,8 @@
 
 # Harry Potter Memory Master (Harry Potter Hafıza Mobil Oyunu)
 
+## Proje Raporu ve daha fazla bilgi için Proje Raporu.pdf
+
 
 ***Android*** ***platformu*** ***üzerinde*** ***bulut***
 ***platformunu*** ***da*** ***kullanarak*** ***mobil***
