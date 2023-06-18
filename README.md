@@ -79,8 +79,8 @@ resimler 1.aşamada firebase cloud una yüklediğimiz base64 formatındaki
 resimler çekilerek eklendi. Single player ve multiplayer oyun modunda
 kartların olduğu ekranın sol üstünde oyuncunun kayıt olurken ki yazdığı
 username gözükür. Single player oyun modunda oyuncunun süresi 45
-saniyedir. Oyun esnasında arka planda bir müzik çalması beklenmektedir. Bu müzik oyun oynanırken çalmaya devam
-eder ve 3 durumda bu müzik değişecektir:
+saniyedir. Oyun esnasında arka planda bir müzik çalması beklenmektedir. 
+Bu müzik oyun oynanırken çalmaya devam eder ve 3 durumda bu müzik değişecektir:
 
 1\) Kartın eşi bulunduğunda farklı bir müzik ile uyarı verilir. 
 
@@ -93,6 +93,34 @@ Oyunda her kartın bir puanı ve ait olduğu bir ev bulunmaktadır. Oyun
 skoru her hamle sonrasında ekranda anlık olarak gösterilecektir. Örn-
 Harry Potter (Puan :10 , Ev: Gryffindor)
 
+• Oyuncu doğru bir eşleştirme yaparsa \[(2\*kartın puanı \* evin
+katsayısı) \* (kalan süre / 10) \] kadar puan kazanır.
+
+• Yanlış bir eşleştirme durumunda iki kart aynı evden ise \[(kartların
+toplam puanı / evin katsayısı) \* (geçen süre / 10)\] kadar puan
+kaybeder.
+
+• Yanlış bir eşleştirme durumunda iki kart farklı evden ise \[(kartların
+puan ortalaması \* Ev_1_katsayı \* Ev_2_katsayı ) \* (geçen süre / 10)\]
+kadar puan kaybeder.
+
+Oyun sonlandığında sonuç ekranında skorumuz, kalan
+süre ve ne kadar sürede bitirdiğimize dair bilgilendirme kutucuğu gelir
+ve istenirse bu ekranda new tıklayarak yeni bir oyuna geçebilir ya da
+exit tıklanarak çıkış yapılabilmektedir.
+
+
+
+
+
+![](images/g13lx130.png)
+![](images/zgd5dcwk.png)
+
+4.Aşama: Multiplayer modunda da yine 4x4 ve 6x6 oyun modlarından biri
+seçilip oyun başlatılır. Bu oyun modunda her 2 oyuncununda 60 saniye
+süresi vardır ve bir oyuncu hamlesini yaptıktan sonra rakibine sıra
+geçtiğinde kendi süresi durmaktadır. Herhangi bir oyuncu açtığı 2 kartı
+doğru bir şekilde eşleştirebildiyse sıra yine kendisinde olur ve bir
 tahmin yapma şansı daha kazanır. Eğer oyuncu yanlış bir eşleştirme
 yaptıysa sıra diğer oyuncuya geçer.
 
@@ -106,24 +134,6 @@ SignInActivity.java (activity_sign_in.xml) -- Giriş ekranı
 
 SelectPlayerActivity.java (activity_select_player.xml) -- Oyuncu modu
 seçim ekranı
-
-• Oyuncu doğru bir eşleştirme yaparsa \[(2\*kartın puanı \* evin
-katsayısı) \* (kalan süre / 10) \] kadar puan kazanır.
-
-• Yanlış bir eşleştirme durumunda iki kart aynı evden ise \[(kartların
-toplam puanı / evin katsayısı) \* (geçen süre / 10)\] kadar puan
-kaybeder.
-
-• Yanlış bir eşleştirme durumunda iki kart farklı evden ise \[(kartların
-puan ortalaması \* Ev_1_katsayı \* Ev_2_katsayı ) \* (geçen süre / 10)\]
-kadar puan kaybeder.
-
-![](./g13lx130.png){width="1.46875in"
-height="2.6944444444444446in"}![](./zgd5dcwk.png){width="1.359721128608924in"
-height="2.6875in"}Oyun sonlandığında sonuç ekranında skorumuz, kalan
-süre ve ne kadar sürede bitirdiğimize dair bilgilendirme kutucuğu gelir
-ve istenirse bu ekranda new tıklayarak yeni bir oyuna geçebilir ya da
-exit tıklanarak çıkış yapılabilmektedir.
 
 LevelsSinglePlayerActivity.java (activity_levels_single_player.xml) --
 Single player için level seçim ekranı
@@ -165,33 +175,14 @@ players için level seçim ekranı
 
 > **III.** **DENEYSEL** **SONUÇLAR**
 
-4.Aşama: Multiplayer modunda da yine 4x4 ve 6x6 oyun modlarından biri
-seçilip oyun başlatılır. Bu oyun modunda her 2 oyuncununda 60 saniye
-süresi vardır ve bir oyuncu hamlesini yaptıktan sonra rakibine sıra
-geçtiğinde kendi süresi durmaktadır. Herhangi bir oyuncu açtığı 2 kartı
-doğru bir şekilde eşleştirebildiyse sıra yine kendisinde olur ve bir
 
-![](./czlwchrs.png){width="1.6458333333333333in"
-height="3.252082239720035in"}![](./r2pr1jqs.png){width="1.6458333333333333in"
-height="3.251388888888889in"}![](./hn5c4ezh.png){width="1.6666666666666667in"
-height="3.2881944444444446in"}
 
-> ![](./5gp03wls.png){width="1.707638888888889in"
-> height="3.384721128608924in"}![](./h1qvrdwa.png){width="1.75in"
-> height="3.4576377952755903in"}**KAYNAKLAR**
->
-> 1-Intro to Java Programming, Comprehensive Version (10th Edition) Y.
-> Daniel Liang
->
-> 2- Nexis-Java ile Android (Youtube)
->
-> 3-https://stackoverflow.com/questions/70095527/only-white-screen-appears-when-i-run-my-app-using-view-binding-in-avd
->
-> 4-
-> [[https://developer.android.com/reference/android]{.underline}](https://developer.android.com/reference/android)
->
-> 5- Android Studio ile Programlama - Aysan Ethem Narman
->
+![](images/czlwchrs.png)
+![](images/r2pr1jqs.png)
+![](images/hn5c4ezh.png)
+![](images/5gp03wls.png)
+![](images/h1qvrdwa.png)
+
 > **IV.SONUÇ**
 
 Bu projede bir mobil uygulamanın verilerinin dahili hafıza dışında bir
@@ -202,3 +193,18 @@ formatları dışında base64 tipinde bir string olarak depolanabildiğini
 authentication işleminin önemini anladık. Günümüzde oldukça yaygın olan
 android oyunların ve uygulamaların yapımında oldukça emek harcandığını
 görmüş olduk.
+
+> **KAYNAKLAR**
+>
+> 1-Intro to Java Programming, Comprehensive Version (10th Edition) Y.
+> Daniel Liang
+>
+> 2- Nexis-Java ile Android (Youtube)
+>
+> 3-https://stackoverflow.com/questions/70095527/only-white-screen-appears-when-i-run-my-app-using-view-binding-in-avd
+>
+> 4-https://developer.android.com/reference/android
+>
+> 5- Android Studio ile Programlama - Aysan Ethem Narman
+>
+
