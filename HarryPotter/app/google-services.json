@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "54889784101",
+    "project_id": "harrypotter-5fe63",
+    "storage_bucket": "harrypotter-5fe63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54889784101:android:238c422bee7ded1462b0cc",
+        "android_client_info": {
+          "package_name": "com.card.harrypotter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54889784101-nvgc7j9acb2qbaq1s58auudpvb6cuqfi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.card.harrypotter",
+            "certificate_hash": "de8a7b592ea213d2f9e6b4a42dd020a5381be46e"
+          }
+        },
+        {
+          "client_id": "54889784101-m9f34jt24e56it8ithqhmga16m0t9r6d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpkujvbRu78apZjwV14jT25TApCPhs4JU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54889784101-m9f34jt24e56it8ithqhmga16m0t9r6d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

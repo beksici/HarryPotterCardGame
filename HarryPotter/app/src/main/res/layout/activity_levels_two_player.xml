@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#439ADF"
+    tools:context=".LevelsTwoPlayerActivity">
+
+    <TextView
+        android:id="@+id/TextViewLevelsTwo"
+        android:layout_width="413dp"
+        android:layout_height="62dp"
+        android:background="#FFEB3B"
+        android:text="LEVELS"
+        android:textAlignment="center"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4x4"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#DF3636"
+        android:onClick="buttonTwo4x4"
+        android:rotationX="-21"
+        android:text="4x4"
+        app:layout_constraintBottom_toTopOf="@+id/button6x6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewLevelsTwo"
+        app:layout_constraintVertical_bias="0.626" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button6x6"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:background="#D10606"
+        android:onClick="buttonTwo6x6"
+        android:rotationX="-21"
+        android:text="6x6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button4x4"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewLevelsTwo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

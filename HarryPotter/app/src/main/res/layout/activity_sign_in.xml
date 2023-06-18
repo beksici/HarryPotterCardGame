@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TextAppearance.Material3.BodyLarge"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/constraBackColor"
+    tools:context=".SignInActivity">
+
+    <TextView
+        android:id="@+id/textViewSıgnIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#C5B847"
+        android:ellipsize="end"
+        android:rotationY="33"
+        android:text="SIGN IN"
+        android:textColor="@color/textViewBlackColor"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <TextView
+        android:id="@+id/textViewEMail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E Mail:"
+        android:textColor="@color/textViewBlackColor"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.251" />
+
+    <TextView
+        android:id="@+id/textViewPasword2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:textColor="@color/textViewBlackColor"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignIn"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEMail2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewEMail2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEMail2"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <EditText
+        android:id="@+id/editTextEMaillSignIn"
+        android:layout_width="272dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Please enter a e-mail"
+        android:inputType="textVisiblePassword"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPasswordSignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintStart_toEndOf="@+id/textViewEMail2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSıgnIn"
+        app:layout_constraintVertical_bias="0.873" />
+
+    <EditText
+        android:id="@+id/editTextPasswordSignIn"
+        android:layout_width="271dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Please enter a password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toEndOf="@+id/textViewPasword2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSıgnIn"
+        app:layout_constraintVertical_bias="0.732" />
+
+    <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="196dp"
+        android:layout_height="57dp"
+        android:background="#000000"
+        android:onClick="btnSignIn"
+        android:rotationX="21"
+        android:text="SIGN IN"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSıgnIn"
+        app:layout_constraintVertical_bias="0.396" />
+
+    <Button
+        android:id="@+id/buttonUpdatePassword"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:background="#000000"
+        android:onClick="buttonUpdatePassword"
+        android:rotationX="21"
+        android:text="RESET PASSWORD"
+        android:textAlignment="center"
+        android:textSize="8dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNotif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn" />
+
+    <TextView
+        android:id="@+id/textViewNotif"
+        android:layout_width="290dp"
+        android:layout_height="28dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <CheckBox
+        android:id="@+id/rememberMe"
+        android:layout_width="136dp"
+        android:layout_height="38dp"
+        android:text="Remember Me"
+        android:buttonTint="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.383" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

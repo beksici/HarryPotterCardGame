@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/constraBackColor"
+    tools:context=".FirstPage">
+
+    <Switch
+        android:id="@+id/switchSound"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:minHeight="48dp"
+        android:text="Sound ON/OFF"
+        android:textColor="#FFC107"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/textWelcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="295dp"
+        android:layout_height="42dp"
+        android:background="#CC9D9D"
+        android:text="WELCOME"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <Button
+        android:id="@+id/firstButtonSignUp"
+        android:layout_width="176dp"
+        android:layout_height="49dp"
+        android:onClick="signUp"
+        android:rotation="-13"
+        android:rotationY="17"
+        android:text="SIGN UP"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textWelcome"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="@+id/textWelcome"
+        app:layout_constraintTop_toBottomOf="@+id/textWelcome"
+        app:layout_constraintVertical_bias="0.265" />
+
+    <Button
+        android:id="@+id/firstButtonSignIn"
+        android:layout_width="176dp"
+        android:layout_height="49dp"
+        android:onClick="signIn"
+        android:rotation="-13"
+        android:rotationY="17"
+        android:text="SIGN IN"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/firstButtonSignUp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/firstButtonSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/firstButtonSignUp"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <Switch
+        android:id="@+id/switchMusic"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:minHeight="48dp"
+        android:text="Music ON/OFF"
+        android:textColor="#FFC107"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/textWelcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.996"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.142" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F43224"
+    tools:context=".SelectPlayerActivity">
+
+    <Button
+        android:id="@+id/buttonSinglePlayer"
+        android:layout_width="173dp"
+        android:layout_height="51dp"
+        android:onClick="buttonSinglePlayer"
+        android:rotation="4"
+        android:rotationX="17"
+        android:rotationY="21"
+        android:text="SINGLE PLAYER"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMultiPlayer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUserNameSelect"
+        app:layout_constraintVertical_bias="0.785" />
+
+    <Button
+        android:id="@+id/buttonSingOut"
+        android:layout_width="144dp"
+        android:layout_height="38dp"
+        android:foregroundGravity="left"
+        android:gravity="left"
+        android:onClick="buttonSignOut"
+        android:rotation="4"
+        android:rotationX="17"
+        android:rotationY="21"
+        android:text="SIGN OUT"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:iconTint="#FAF6FB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMultiPlayer"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toStartOf="@+id/buttonMultiPlayer"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiPlayer"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <Button
+        android:id="@+id/buttonMultiPlayer"
+        android:layout_width="180dp"
+        android:layout_height="53dp"
+        android:onClick="buttonTwoPlayer"
+        android:rotation="4"
+        android:rotationX="17"
+        android:rotationY="21"
+        android:text="TWO PLAYER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUserNameSelect"
+        app:layout_constraintVertical_bias="0.468" />
+
+    <TextView
+        android:id="@+id/textViewUserNameSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#USER NAME#"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.091" />
+
+    <TextView
+        android:id="@+id/textViewUserNameSelectField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSinglePlayer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUserNameSelect"
+        app:layout_constraintVertical_bias="0.134" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
